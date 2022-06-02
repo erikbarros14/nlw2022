@@ -4,8 +4,11 @@ import successImg  from '../../assets/success.png';
 import { Copyrght } from '../Copyrght';
 
 import { styles } from './styles';
+interface Props {
+  onSendAnotherFeedback: () => void;
+}
 
-export function Success() {
+export function Success( {onSendAnotherFeedback} : Props) {
   return (
     <View style={styles.container}>
 
@@ -16,7 +19,9 @@ export function Success() {
           <Text style={styles.title}>
               Agradecemos o seu feedback ! 
           </Text>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity 
+        onPress={onSendAnotherFeedback}
+        style={styles.button}>
             <Text  style={styles.buttonTitle}>
             Quero enviar outro .
             </Text>

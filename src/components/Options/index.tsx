@@ -4,11 +4,13 @@ import { Copyrght } from '../Copyrght';
 import { Option } from '../Option';
 
 	import {feedbackTypes} from '../../utils/feedbackTypes'
-
+  import { FeedbackType } from '../Widget';
 import { styles } from './styles';
+interface  Props{
+  onFeedbackTypechanged: (feedbackType : FeedbackType) => void
+}
 
-
-export function Options() {
+export function Options({onFeedbackTypechanged} : Props) {
   return (
     <View style={styles.container}>  
 
@@ -23,6 +25,7 @@ export function Options() {
         key={key}
         title={value.title}
         image={value.image}
+        onPress={  () => onFeedbackTypechanged(key as FeedbackType)}
       />
     ))
   }

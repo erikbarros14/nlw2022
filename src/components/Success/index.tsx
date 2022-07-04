@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Image , TouchableOpacity } from 'react-native';
 import successImg  from '../../assets/success.png';
-import { Copyrght } from '../Copyrght';
+import { Copyrght as Copyright } from '../Copyrght';
 
 import { styles } from './styles';
 interface Props {
@@ -23,10 +23,10 @@ export function Success( {onSendAnotherFeedback} : Props) {
         onPress={onSendAnotherFeedback}
         style={styles.button}>
             <Text  style={styles.buttonTitle}>
-            Quero enviar outro .
+            Query Envier outre .
             </Text>
         </TouchableOpacity>
-         <Copyrght/>
+         <Copyright/>
     </View>
   );
 }
